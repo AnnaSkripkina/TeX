@@ -1,0 +1,287 @@
+\documentclass[a4paper,fontsize=14bp]{article}
+\usepackage{cmap} % возможность поиска в созданном pdf
+\usepackage{fontspec} %для использования гостовского шрифта
+\usepackage{setspace} % для задания интервала
+\usepackage{titlesec} % настройка заголовков
+\setmainfont{Times New Roman}
+\usepackage{background}
+\usepackage{graphicx}
+\usepackage{float}
+\backgroundsetup{contents={}}
+\usepackage{eso-pic}
+\usepackage{longtable} %для таблиц на несколько страниц
+\usepackage{fancyhdr} %для оформления надписей в рамках
+\usepackage[absolute]{textpos} % для размещения текста в любой точке страницы по координатам
+\usepackage{lastpage} % посчитать общее количество страниц в документе
+\unitlength=1mm
+\setlength{\paperheight}{297mm} \setlength{\paperwidth}{210mm}
+%\usepackage{showkeys}
+
+% Поля
+\usepackage{geometry}
+   \geometry{left=3.5cm}
+   \geometry{right=1.5cm}
+   \geometry{top=1cm}
+   \geometry{bottom=2cm}
+
+ \titlespacing{\section}{12.5mm}{0mm}{6pt}
+\titlespacing{\subsection}{12.5mm}{0mm}{6pt}
+\titlespacing{\subsubsection}{12.5mm}{0mm}{6pt}
+
+ %\titleformat{\section}{\normalfont\Large\bfseries}{\thesection}{14bp}{}
+ \titleformat{\subsection}{\normalfont\Large\bfseries}{\thesubsection}{14bp}{}
+ \titleformat{\subsubsection}{\normalfont\Large\bfseries}{\thesubsubsection}{14bp}{} % выровняли шрифт одинакового размера разделов трех уровней 
+ 
+\begin{document}
+\clubpenalty
+\widowpenalty
+\sloppy
+\onehalfspacing %полуторный интервал
+\pagestyle{empty}
+
+% \begin{titlepage} 
+\AddToShipoutPictureBG*{\includegraphics[width =210 mm,height =297 mm]{Ramka_Visio.pdf}}
+\fontsize{14}{14}\selectfont
+  \begin{center}
+  Общество с ограниченной ответственностью «Ф-Плюс Мобайл»
+  \end{center}
+  \quad
+ \fontsize{12}{12}\selectfont{
+  \begin{flushleft}
+  { ОКПД2 26.20.15.000 \hspace{10cm} Группа Э61}
+  \end{flushleft}
+  \begin{flushright}
+
+  {  УТВЕРЖДАЮ \hspace{1.3cm}
+  
+  Генеральный директор  \hspace{0.9cm}
+  
+  ООО «Марвел КТ» - \hspace{1.4cm}
+  
+ управляющей организацией 
+  
+  ООО «Ф-Плюс Мобайл» \hspace{0.5cm}
+  
+  \quad
+  
+  \underline{\hspace{2.1cm}} А.С.~Мельников
+  
+  «\underline{\hspace{0.8cm}}» \underline{\hspace{1.7cm}} 2021 г. \hspace{0.1cm}
+  \quad}
+  \end{flushright}
+ } 
+ \vspace{2cm} 
+
+  \begin{center}
+  \fontsize{14}{12}\selectfont{
+  \bfseries{
+  Персональный компьютер
+  
+  торговой марки f+data
+  
+  модели FPD-7-PC-W5K70TC-CTO
+    
+  \quad
+  
+  \quad
+  
+  Технические условия
+  
+  ТУ 26.20.15.000-013-31599443-2021}
+  
+  \mdseries{(Вводятся впервые)}
+  }
+  \end{center}
+
+  \vspace{3cm}
+  
+  \fontsize{12}{12}\selectfont
+  \begin{flushright}
+   \underline{Дата введения: 13.08.2021 г.}\hspace{0.8cm}
+  
+   Без ограничения срока действия
+  
+  \end{flushright}
+  
+  \quad
+    
+  \quad
+ 
+  \begin{flushright}
+  РАЗРАБОТАЛ: \hspace{1.8cm}
+  
+  \underline{\hspace{3.5cm}}Г.А. Долматова
+
+   «\underline{\hspace{0.8cm}}» \underline{\hspace{2.3cm}} 2021 г.\hspace{0.5cm} 
+   \quad
+  \end{flushright}
+  
+  \begin{center}
+    \fontsize{12}{12}\selectfont
+   \vspace{5cm}
+    Москва
+   
+    2021
+   \end{center}
+% \end{titlepage}
+\newpage 
+\AddToShipoutPictureBG*{\includegraphics[width =210 mm,height =297 mm]{Ramka_Visio_2.pdf}}
+{\setmainfont{GOST2304 Type A}
+{\sl
+\begin{textblock*}{4 mm}[0.5,0.5](179 mm,275 mm)%
+\noindent%
+\large {\thepage} % номер страницы
+\end{textblock*}
+\begin{textblock*}{4 mm}[0.5,0.5](196 mm,275 mm)%
+\noindent%
+\large{\pageref{LastPage}} % общее количество страниц
+\end{textblock*}
+\begin{textblock*}{40 mm}[0.5,0.5](157 mm,260 mm)%
+\noindent%
+\huge{ХХХХ РЭ} 
+\end{textblock*}
+\begin{spacing}{0.7} %междстрочный интервал
+\begin{textblock*}{70 mm}[0.5,0.5](119 mm,280 mm)%
+\noindent%
+\begin{center}
+\Large {Название изделия\\
+название торговой марки\\
+Названия моделей\\
+Руководство по эксплуатации}
+\end{center}
+\end{textblock*}
+\end{spacing}
+\begin{textblock*}{50 mm}[0.5,0.5](179 mm,285 mm)%
+\noindent%
+\begin{center}
+\Large {Производитель}
+\end{center}
+\end{textblock*}
+}}
+\newgeometry{left=2.5cm,right=1cm, top=1cm, bottom=5cm}
+\setlength{\parindent}{1.25cm} % задали красную строку
+
+\fontsize{14}{14}\selectfont
+ \renewcommand{\contentsname}{Содержание} %переименовали дефолтную напись Contents в Содержание
+ \renewcommand{\contentsname}{\centering Содержание}
+ \tableofcontents  % создание содержания
+ \newpage
+\AddToShipoutPictureBG{\includegraphics[width =210 mm,height =297 mm]{Ramka_Visio_3.pdf}} 
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancyfoot[R]{
+{\setmainfont{GOST2304 Type A}
+{\sl
+\begin{textblock*}{40 mm}[0.5,0.5](130 mm,285 mm)%
+\noindent%
+\huge{ХХХХ РЭ} 
+\end{textblock*}
+\begin{textblock*}{4 mm}[0.5,0.5](198 mm,288 mm)%
+\noindent%
+\Large {\thepage} % номер страницы
+\end{textblock*}}}}
+\newpage
+\newcounter{rnum}[subsection]
+\newcounter{pnum}[subsection]
+\renewcommand{\labelitemi}{\textendash} %сделать маркером тире
+
+\newcommand{\rnum}{\addtocounter{rnum}{1}%
+\textnormal{\thesubsection-\arabic{rnum}} }
+\newcommand{\pnum}{\addtocounter{pnum}{1}%
+\textnormal{\thesubsection-\arabic{pnum}} }
+\newgeometry{left=2.5cm,right=1cm, top=1cm, bottom=2.5cm} 
+\fontsize{14}{14}\selectfont
+\section{Рисунки}
+\subsection{Рисунок 1} 
+%\newcommand{\rnum}{\addtocounter{rnum}{1}%
+%\textnormal{\arabic{rnum}} }
+%\newcommand{\pnum}{\addtocounter{pnum}{1}%
+%\textnormal{\arabic{pnum}} }
+Извлеките адаптер медиамодуля, как показано на рисунке \pnum :
+\begin{figure}[h]
+\centering
+\fontsize{14}{14}\selectfont
+\includegraphics[height=8cm]{am}
+
+Рисунок \rnum -- Извлечение адаптера медиамодуля.
+\end{figure}
+
+Извлеките оптический диск, как показано на рисунке \pnum :
+\begin{figure}[h]
+\centering
+\fontsize{14}{14}\selectfont
+\includegraphics[height=8cm]{od}
+
+Рисунок \rnum -- Извлечение оптического диска.
+\end{figure}
+%\newpage
+\subsection{Рисунок 2}
+%\setcounter{pnum}{0}
+%\setcounter{rnum}{0}
+Дополнительные сведения см. в разделе Удаленная поддержка Insight и Онлайн-руководство по настройке Insight для серверов ProLiant и корпусов BladeSystem c-класса на веб-сайте Hewlett Packard Enterprise. Удаленная поддержка Insight доступна в рамках корпоративной гарантии HewlettPackard, услуг поддержки HPE или соглашения о контрактной поддержке Hewlett Packard Enterprise.
+
+Светодиодные индикаторы и кнопки передней панели в корпусе SFF, показаны на рисунке  \pnum :
+\begin{figure}[h]
+\centering
+\fontsize{14}{14}\selectfont
+\includegraphics[height=4cm]{svind}
+
+Рисунок \rnum -- Светодиодные индикаторы и кнопки передней панели в корпусе SFF.
+\end{figure}
+\nopagebreak
+
+%\begin{table}
+
+%\onehalfspacing 
+%\fontsize{14}{14}\selectfont
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+\begin{longtable}{|l|*{2}{p{7cm}|}}
+\hline
+\textbf{Элемент}&\textbf{Описание}& \textbf{Статус}\\                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+\hline
+1 & Светодиодный индикатор/ Кнопка «Идентификатор пользователя» (UID) 
+& Непрерывный синий = активирован 
+
+Мигающий синий:
+\begin{itemize}
+\item 1 вспышка в секунду = Удаленное управление или обновление прошивки в процессе~
+\item 4 вспышки в секунду = инициирована задача ручной перезагрузки iLO
+\item 8 вспышек в секунду = выполняется задача ручной перезагрузки iLO.Выключен = Деактивирован
+\end{itemize}\\
+\hline                                                                                                                                                             
+2 & Светодиодный индикатор жизнеобеспечения  & 
+Непрерывный зеленый = В норме 
+
+Мигающий зеленый (1 вспышка в секунду) = iLO перезагружается 
+
+Мигающий желтый = Состояние системы ухудшилось 
+
+Мигающий красный (1 вспышка в секунду) = Система находится в критическом состоянии. 
+
+Если индикатор состояния указывает на ухудшенное или критическое состояние, просмотрите IML системы ("Журнал интегрированного управления" на стр. 129) или используйте iLO ("HPE iLO" на стр. 127) для просмотра состояния жизнеобеспечения системы.\\
+\hline
+3 & Светодиодный индикатор состояния сетевой карты & 
+Непрерывный зеленый = Подключение к сети 
+
+Мигающий зеленый (1 вспышка в секунду) = Сеть активна 
+
+Выключен = Нет сетевой активности\\
+\hline
+
+\end{longtable}
+\end{center}                                                                                                                                                                                                                                                                                                                                                      
+%\end{table}
+\section{Рисунки}
+\subsection{Рисунок 1}
+Светодиодные индикаторы и кнопки передней панели в корпусе SFF, показаны на рисунке  \pnum :
+\begin{figure}[h]
+\centering
+\fontsize{14}{14}\selectfont
+\includegraphics[height=4cm]{svind} 
+
+
+\end{figure}
+\end{document}
